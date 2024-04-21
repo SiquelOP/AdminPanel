@@ -1,0 +1,94 @@
+@import 'main';
+@import 'mouse-paralax';
+
+.loginForm {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 16 / 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    border: 1px solid $logibFieldBorder;
+    border-radius: 6px;
+
+    input {
+        padding: 15px 0 5px 15px;
+        background: transparent;
+        
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $logibFieldBorder;
+
+        font-size: 1.025em;
+        font-weight: bolder;
+        letter-spacing: 0.07em;
+        color: $textColor;
+
+        transition-duration: .3s;
+
+        &:focus-visible::placeholder {
+            translate: 0 -100%;
+            font-size: smaller;
+            letter-spacing: 0.02em;
+        }
+
+        &::placeholder {
+            transition-duration: .2s;
+            position: absolute;
+        }
+
+        &.inputError {
+            border-bottom: 1px solid $errorBorderColor;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        position: relative;
+        background: transparent;
+        outline: none;
+        border: none;
+
+        font-size: 1.025em;
+        font-weight: bolder;
+        letter-spacing: 0.07em;
+        color: $textColor;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: $logibFieldBorder;
+            bottom: -5px;
+            left: 50%;
+            translate: -50% 0;
+            position: absolute;
+            transition-duration: .3s;
+        }
+
+        &:hover::after, &:active::after, &:focus-visible::after {
+            width: 100%!important;
+        }
+    }
+
+    .passwordHolder {
+        position: relative;
+
+        svg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            translate: 0 -50%;
+
+            transition-duration: .2s;
+            opacity: 0;
+
+            &.activeSvg {
+                opacity: 1;
+            }
+        }
+    }
+}
