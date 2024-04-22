@@ -1,4 +1,4 @@
-<?php 
+<?php
     require_once 'database.php';
 
     $login = $_POST['login'];
@@ -11,10 +11,9 @@
     
     $user = $stmt -> fetch();
     
+    // Jeśli użytkownik istnieje i hasło jest poprawne, zaloguj go.
     if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_login'] = $user['login'];
-        $_SESSION['user_authorization'] = $user['authorization'];
+        $_SESSION['user'] = $user;
 
         echo json_encode(['success' => true, 'authorization' => $user['authorization']]);
     } else {

@@ -1,3 +1,11 @@
+
+<?php
+    session_start();
+    // Jeśli użytkownik jest już zalogowany, przekieruj go na stronę główną.
+    if (isset($_SESSION['user'])) {
+        header("location: index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +19,10 @@
     <link rel="stylesheet" href="assets/style/css/login.css">
 </head>
 <body>
-    <div class="paralax">
-        <!-- obrazki z tyłu -->
-
-        <div class="loginForm">
-
-            <input type="text" class="" name="login" placeholder="Login" id="loginArea">
-
-            <div class="passwordHolder">
-                <input type="password" name="password" placeholder="Hasło" id="passwordArea" class="password">
-
-                <input type="checkbox" name="passwordVisibility" class="passwordVisibility">
-            </div>
-
-           <button class="submitLogin">Zaloguj</button>
-        </div>
-
-        <!-- obrazki z przodu -->
+    <?php
+        include 'include/paralax.php';
+        include 'include/loginForm.php'
+    ?>
     </div>
 </body>
 </html>

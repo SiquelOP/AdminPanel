@@ -1,24 +1,24 @@
+<?php
+        session_start();
+
+        // if user is not logged in, redirect to login page
+        if (!isset($_SESSION['user'])) {
+            header("location: landing.php");
+        }
+        // if user is not an admin, redirect to index page
+        else if ($_SESSION['user'][2] < 3) {
+            header("location: index.php");
+        }   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AdminPanel - Eurozon</title>
 </head>
 <body>
-    <?php 
-        session_start();
-
-        if (!isset($_SESSION['user_authorization'])) {
-            header("location: login.php");
-        }
-        else if ($_SESSION['user_authorization'] != 2) {
-            echo $_SESSION['authorization'];
-            header("location: index.php");
-        }   
-
-        echo $_SESSION['user_authorization'];
-    ?>
     
 </body>
 </html>

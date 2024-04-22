@@ -1,0 +1,17 @@
+@import 'main';
+@import 'mouse-paralax';
+
+.registerForm {
+    width: 100%;
+    max-width: 450px;
+    max-height: fit-content;
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    border: 1px solid $logibFieldBorder;
+    border-radius: 6px;
+}
