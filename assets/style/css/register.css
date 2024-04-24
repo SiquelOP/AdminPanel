@@ -40,8 +40,20 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
+}
+.paralax img {
+  position: absolute;
+  width: 100%;
+  scale: 1.05;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+.paralax .registerForm, .paralax .loginForm {
+  box-shadow: 0px 0px 30px 1px rgb(72, 83, 171), inset 0px 0px 30px 0px rgb(72, 83, 171);
 }
 
 .registerForm {
@@ -49,11 +61,52 @@ body {
   max-width: 450px;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  min-height: 150px;
+  padding: 50px 0 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
+  border: 3px solid rgb(134, 138, 207);
+  border-radius: 16px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+.registerForm input {
+  padding: 15px 10px 5px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(134, 138, 207);
+  font-size: 1.025em;
+  font-weight: bolder;
+  letter-spacing: 0.07em;
+  color: #CCCCCC;
+  transition-duration: 0.3s;
+}
+.registerForm input:focus-visible::-moz-placeholder {
+  translate: 0 -100%;
+  font-size: smaller;
+  letter-spacing: 0.02em;
+}
+.registerForm input:focus-visible::placeholder {
+  translate: 0 -100%;
+  font-size: smaller;
+  letter-spacing: 0.02em;
+}
+.registerForm input::-moz-placeholder {
+  transition-duration: 0.2s;
+  position: absolute;
+}
+.registerForm input::placeholder {
+  transition-duration: 0.2s;
+  position: absolute;
+}
+.registerForm input.inputError {
+  border-bottom: 1px solid rgb(207, 34, 46);
+}
+.registerForm * {
+  display: none;
+}
+.registerForm *:first-child {
+  display: block;
 }

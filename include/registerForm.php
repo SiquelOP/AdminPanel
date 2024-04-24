@@ -1,5 +1,5 @@
-<div class="registerForm">
-    <input type="text" class="" name="login" placeholder="Login" id="loginArea">
+<div class="registerForm paralax-elem">
+    <input type="text" class="" name="login" placeholder="Email" id="loginArea">
 
     <div class="passwordHolder">
         <input type="password" name="password" placeholder="Hasło" id="passwordArea" class="password">

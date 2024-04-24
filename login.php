@@ -19,10 +19,17 @@
     <link rel="stylesheet" href="assets/style/css/login.css">
 </head>
 <body>
-    <?php
-        include 'include/paralax.php';
-        include 'include/loginForm.php'
-    ?>
+<div class="paralax">
+        <img class="paralax-elem" data-speed="0.1" src="assets/img/paralax/stars.png" alt="forground trees">
+        <img class="paralax-elem" data-speed="0.075" src="assets/img/paralax/moon.png" alt="forground trees">
+        <img class="paralax-elem" data-speed="0.05" src="assets/img/paralax/mountains_behind.png" alt="forground trees">
+
+        <?php
+            include 'include/loginForm.php'
+        ?>
+        
+        <img class="paralax-elem" data-speed="0.01" src="assets/img/paralax/mountains_front.png" alt="forground trees">
+    </div>
     </div>
 </body>
 </html>

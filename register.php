@@ -18,12 +18,16 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="paralax">
+        <img src="assets/img/paralax/stars.png" alt="forground trees">
+        <img src="assets/img/paralax/moon.png" alt="forground trees">
+        <img src="assets/img/paralax/mountains_behind.png" alt="forground trees">
 
-    <?php
-        include 'include/paralax.php';
-        include 'include/registerForm.php'
-    ?>
+        <?php
+            include 'include/registerForm.php'
+        ?>
+        
+        <img src="assets/img/paralax/mountains_front.png" alt="forground trees">
     </div>
-    
 </body>
 </html>

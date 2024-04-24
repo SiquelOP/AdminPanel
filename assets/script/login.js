@@ -1,16 +1,34 @@
 $(document).ready(function () {
-    $('.submitLogin').click(function () { 
-        sendForm();
+
+    login = $('#loginArea');
+    password = $('#passwordArea');
+
+    $('.submitLogin').click(function (e) {
+        if(validation()) {
+            sendForm();
+        }
+    });
+
+    $(document).keydown(function(event) {
+        if (event.which === 13) {
+            if(validation()) {
+                sendForm();
+            }
+        }
+    });
+
+
+    login.on('input', function() {
+        login.removeClass('inputError');
+    });
+
+    password.on('input', function() {
+        password.removeClass('inputError');
     });
 });
 
 
 const sendForm = () => {
-
-    if (!validation()) {
-        return;
-    }
-
     $.ajax({
         url: 'API/loginUser.php',
         type: 'post',
@@ -38,9 +56,6 @@ const sendForm = () => {
 
 const validation = () => {
     let isValid = true;
-    
-    login = $('#loginArea');
-    password = $('#passwordArea');
 
     if (login.val() === '') {
         login.addClass('inputError');
@@ -53,14 +68,6 @@ const validation = () => {
 
         isValid = false;
     }
-
-    login.on('input', function() {
-        login.removeClass('inputError');
-    });
-
-    password.on('input', function() {
-        password.removeClass('inputError');
-    });
 
     return isValid;
 }
