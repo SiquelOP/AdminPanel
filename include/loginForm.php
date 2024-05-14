@@ -1,4 +1,4 @@
-<div class="loginForm paralax-elem" data-speed="0.025">
+<div class="loginForm">
     <input type="text" class="" name="login" placeholder="Login" id="loginArea">
 
     <div class="passwordHolder">

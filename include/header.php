@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        
-    </header>
+<header>
+
+        <img src="assets/img/Logo.png" alt="Eurozon logo" class="logo">
+
+        <div class="nav">
+
+        </div>
+
+        <div class="user">
+            <img src="assets/img/cart.png" alt="profile">
+            <img src="assets/img/user.png" alt="profile">
+        </div>
+
+</header>

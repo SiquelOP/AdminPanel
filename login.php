@@ -1,4 +1,3 @@
-
 <?php
     session_start();
     // Jeśli użytkownik jest już zalogowany, przekieruj go na stronę główną.
@@ -13,13 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="assets/script/main.js" defer></script>
     <script src="assets/script/login.js" defer></script>
     <script src="assets/script/mouseParalax.js" defer></script>
     <script src="assets/script/showHidePassword.js" defer></script>
     <link rel="stylesheet" href="assets/style/css/login.css">
 </head>
 <body>
-<div class="paralax">
+    <div class="paralax">
         <img class="paralax-elem" data-speed="0.1" src="assets/img/paralax/stars.png" alt="forground trees">
         <img class="paralax-elem" data-speed="0.075" src="assets/img/paralax/moon.png" alt="forground trees">
         <img class="paralax-elem" data-speed="0.05" src="assets/img/paralax/mountains_behind.png" alt="forground trees">
@@ -30,6 +30,8 @@
         
         <img class="paralax-elem" data-speed="0.01" src="assets/img/paralax/mountains_front.png" alt="forground trees">
     </div>
-    </div>
+
+    <div class="blur"></div>
+    <div class="refresher"> </div>
 </body>
 </html>

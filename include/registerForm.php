@@ -1,5 +1,10 @@
-<div class="registerForm paralax-elem">
-    <input type="text" class="" name="login" placeholder="Email" id="loginArea">
+<div class="registerForm">
+    <div class="emailHolder">
+        <input type="text" class="" name="email" placeholder="Email" id="emailArea">
+        <div class="emailIndicator">
+            
+        </div>
+    </div>
 
     <div class="passwordHolder">
         <input type="password" name="password" placeholder="Hasło" id="passwordArea" class="password">

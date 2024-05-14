@@ -9,7 +9,7 @@
 }
 .paralax img {
   position: absolute;
-  width: 100%;
+  min-width: 100%;
   scale: 1.05;
   top: 50%;
   left: 50%;

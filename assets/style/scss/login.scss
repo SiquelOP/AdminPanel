@@ -1,6 +1,10 @@
 @import 'main';
 @import 'mouse-paralax';
 
+body {
+    overflow: hidden;
+}
+
 .loginForm {
     width: 100%;
     max-width: 450px;

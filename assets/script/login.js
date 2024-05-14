@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     login = $('#loginArea');
     password = $('#passwordArea');
 
@@ -41,6 +40,11 @@ const sendForm = () => {
 
             if (response.success) {
                 console.log('Dane użytkownika pobrano pomyślnie');
+                $('.refresher').animate({
+                    'top': '0',
+                }, 'fast', function() {
+                    window.location.href = response.authorization == 3 ? 'panel.php' : 'index.php';
+                });
                 
 
             } else {
