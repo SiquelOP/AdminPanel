@@ -1,1 +1,6 @@
 @import 'main';
+
+body {
+    background-image: $stars;
+    overflow: hidden;
+}

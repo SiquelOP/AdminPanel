@@ -6,10 +6,21 @@
         </div>
     </div>
 
+    <div class="loginHolder">
+        <input type="text" name="login" placeholder="Login" id="loginArea">
+        <div class="loginIndicator">
+            
+        </div>
+    </div>
+
     <div class="passwordHolder">
-        <input type="password" name="password" placeholder="Hasło" id="passwordArea" class="password">
+        <input type="password" name="password" placeholder="Hasło" id="passwordArea" class="password" focus>
+        <div class="passwordIndicator">
+            
+        </div>
         <input type="checkbox" name="passwordVisibility" class="passwordVisibility">
     </div>
 
-    <button class="submitLogin">Zaloguj</button>
+
+    <button class="submit">Zarejestruj</button>
 </div>

@@ -2,7 +2,7 @@ $(document).ready(function () {
     login = $('#loginArea');
     password = $('#passwordArea');
 
-    $('.submitLogin').click(function (e) {
+    $('.submit').click(function (e) {
         if(validation()) {
             sendForm();
         }
@@ -39,8 +39,8 @@ const sendForm = () => {
             response = JSON.parse(response);
 
             if (response.success) {
-                console.log('Dane użytkownika pobrano pomyślnie');
                 $('.refresher').animate({
+                    'display': 'block',
                     'top': '0',
                 }, 'fast', function() {
                     window.location.href = response.authorization == 3 ? 'panel.php' : 'index.php';
@@ -49,7 +49,6 @@ const sendForm = () => {
 
             } else {
                 console.log('Logowanie nie powiodło się!');
-
             }
         },
         error: function() {

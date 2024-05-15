@@ -1,11 +1,10 @@
 $(document).ready(function () {
-
-
     $('.refresher').delay('500').animate({
         'top': '100%'
     }, 750, function() {
         $('.refresher').css('display', 'none');
         $('.blur').css('display', 'none');
+        $('body').css('overflow', 'visible');
     });
 
     let step = 50;
@@ -17,8 +16,4 @@ $(document).ready(function () {
             step--;
         }, 15);
     }, 500);
-    
-
-
-
 });

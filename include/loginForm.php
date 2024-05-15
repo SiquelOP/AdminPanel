@@ -6,5 +6,5 @@
         <input type="checkbox" name="passwordVisibility" class="passwordVisibility">
     </div>
 
-    <button class="submitLogin">Zaloguj</button>
+    <button class="submit">Zaloguj</button>
 </div>

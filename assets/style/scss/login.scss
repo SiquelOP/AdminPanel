@@ -55,50 +55,21 @@ body {
         }
     }
 
-    button {
-        cursor: pointer;
-        position: relative;
-        background: transparent;
-        outline: none;
-        border: none;
-
-        font-size: 1.025em;
-        font-weight: bolder;
-        letter-spacing: 0.07em;
-        color: $textColor;
-
-        &::after {
-            content: '';
-            width: 0;
-            height: 1px;
-            background-color: $logibFieldBorder;
-            bottom: -5px;
-            left: 50%;
-            translate: -50% 0;
-            position: absolute;
-            transition-duration: .3s;
-        }
-
-        &:hover::after, &:active::after, &:focus-visible::after {
-            width: 100%!important;
-        }
-    }
-
     .passwordHolder {
         position: relative;
 
-        svg {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            translate: 0 -50%;
+        // svg {
+        //     position: absolute;
+        //     right: 0;
+        //     top: 50%;
+        //     translate: 0 -50%;
 
-            transition-duration: .2s;
-            opacity: 0;
+        //     transition-duration: .2s;
+        //     opacity: 0;
 
-            &.activeSvg {
-                opacity: 1;
-            }
-        }
+        //     &.activeSvg {
+        //         opacity: 1;
+        //     }
+        // }
     }
 }
