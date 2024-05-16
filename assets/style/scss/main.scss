@@ -23,6 +23,36 @@ body {
 }
 
 .loginForm, .registerForm {
+    .holderP {
+        display: block !important;
+        position: absolute;
+        right: 10px;
+        top: calc(100% + 10px);
+
+        .postScriptum {
+            position: relative;
+            margin: 0;
+            color: white;
+            cursor: pointer;
+    
+            &::after {
+                content: '';
+                width: 0;
+                height: 3px;
+                background: linear-gradient(transparent, black 30%, black 70%, transparent);
+                bottom: -5px;
+                left: 50%;
+                translate: -50% 0;
+                position: absolute;
+                transition-duration: .3s;
+            }
+    
+            &:hover::after, &:active::after, &:focus-visible::after {
+                width: 100%!important;
+            }
+    }
+
+    }
     .passwordVisibility {
         margin: 0;
         padding: 0;

@@ -1,13 +1,10 @@
 .paralax {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-.paralax img {
+.paralax img.paralax-elem {
   position: absolute;
   min-width: 100%;
   scale: 1.05;

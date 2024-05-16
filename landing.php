@@ -48,8 +48,10 @@
                     Dokouj swoich zakupów w wiodącym sklepie w europie.
                 </p>
     
-                <div class="optionHolder hrefButton" data-href="register.php">
-                    <div class="registerOption">Zarejestruj się</div>
+                <div class="optionHolder">
+                    <div class="registerOption hrefButton" data-href="register.php">
+                        Zarejestruj się
+                    </div>
                     <div class="separator">
     
                     </div>

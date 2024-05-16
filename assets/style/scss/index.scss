@@ -1,6 +1,32 @@
 @import 'main';
+@import 'mouse-paralax';
 
 body {
-    background-image: $stars;
     overflow: hidden;
+
+    header {
+        position: relative ;
+        top: 0;
+        margin-bottom: 96px;
+    }
+
+    .container {
+        max-width: 1275px;
+        width: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+
+        .card {
+            max-width: 300px;
+            width: 100%;
+            aspect-ratio: 10 / 16;
+            border-radius: .375rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
 }

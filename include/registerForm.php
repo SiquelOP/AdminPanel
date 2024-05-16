@@ -23,4 +23,10 @@
 
 
     <button class="submit">Zarejestruj</button>
+
+    <div class="holderP">
+        <p class="postScriptum hrefButton" data-href="login.php">
+            Masz już konto? Zaloguj się!
+        </p>
+    </div>
 </div>

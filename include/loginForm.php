@@ -7,4 +7,9 @@
     </div>
 
     <button class="submit">Zaloguj</button>
+    <div class="holderP">
+        <p class="postScriptum hrefButton" data-href="register.php">
+            Nie masz konta? Zarejestruj się!
+        </p>
+    </div>
 </div>

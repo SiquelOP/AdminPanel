@@ -19,6 +19,32 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+.loginForm .holderP, .registerForm .holderP {
+  display: block !important;
+  position: absolute;
+  right: 10px;
+  top: calc(100% + 10px);
+}
+.loginForm .holderP .postScriptum, .registerForm .holderP .postScriptum {
+  position: relative;
+  margin: 0;
+  color: white;
+  cursor: pointer;
+}
+.loginForm .holderP .postScriptum::after, .registerForm .holderP .postScriptum::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: linear-gradient(transparent, black 30%, black 70%, transparent);
+  bottom: -5px;
+  left: 50%;
+  translate: -50% 0;
+  position: absolute;
+  transition-duration: 0.3s;
+}
+.loginForm .holderP .postScriptum:hover::after, .loginForm .holderP .postScriptum:active::after, .loginForm .holderP .postScriptum:focus-visible::after, .registerForm .holderP .postScriptum:hover::after, .registerForm .holderP .postScriptum:active::after, .registerForm .holderP .postScriptum:focus-visible::after {
+  width: 100% !important;
+}
 .loginForm .passwordVisibility, .registerForm .passwordVisibility {
   margin: 0;
   padding: 0;
@@ -117,7 +143,47 @@ header .user img:hover {
   transition-duration: 0.1s;
 }
 
-body {
-  background-image: url(../../img/paralax/stars.png);
+.paralax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
+}
+.paralax img.paralax-elem {
+  position: absolute;
+  min-width: 100%;
+  scale: 1.05;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+.paralax .registerForm, .paralax .loginForm {
+  box-shadow: 0px 0px 30px 1px rgb(72, 83, 171), inset 0px 0px 30px 0px rgb(72, 83, 171);
+}
+
+body {
+  overflow: hidden;
+}
+body header {
+  position: relative;
+  top: 0;
+  margin-bottom: 96px;
+}
+body .container {
+  max-width: 1275px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+body .container .card {
+  max-width: 300px;
+  width: 100%;
+  aspect-ratio: 10/16;
+  border-radius: 0.375rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

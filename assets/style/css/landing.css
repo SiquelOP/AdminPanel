@@ -19,6 +19,31 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+.loginForm .holderP, .registerForm .holderP {
+  position: absolute;
+  right: 10px;
+  top: calc(100% + 10px);
+}
+.loginForm .holderP .postScriptum, .registerForm .holderP .postScriptum {
+  position: relative;
+  margin: 0;
+  color: #848d97;
+  cursor: pointer;
+}
+.loginForm .holderP .postScriptum::after, .registerForm .holderP .postScriptum::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: linear-gradient(transparent, rgb(134, 138, 207) 30%, rgb(134, 138, 207) 70%, transparent);
+  bottom: -5px;
+  left: 50%;
+  translate: -50% 0;
+  position: absolute;
+  transition-duration: 0.3s;
+}
+.loginForm .holderP .postScriptum:hover::after, .loginForm .holderP .postScriptum:active::after, .loginForm .holderP .postScriptum:focus-visible::after, .registerForm .holderP .postScriptum:hover::after, .registerForm .holderP .postScriptum:active::after, .registerForm .holderP .postScriptum:focus-visible::after {
+  width: 100% !important;
+}
 .loginForm .passwordVisibility, .registerForm .passwordVisibility {
   margin: 0;
   padding: 0;
