@@ -1,8 +1,9 @@
 <?php
     require_once 'database.php';
 
-    $stm = $connection -> prepare('SELECT * FROM products');
-    $products = $stmt -> execute() -> fetchAll(PDO::FETCH_COLUMN);
+    $stmt = $connection -> prepare('SELECT * FROM products');
+    $stmt -> execute();
+    $products = $stmt -> fetchAll();
 
     echo json_encode(['success' => true, 'products' => $products]);
 ?>
