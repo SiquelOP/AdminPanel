@@ -19,5 +19,5 @@
 
     $_SESSION['user'] = $user;
 
-    echo true;
+    echo json_encode(['success' => true]);
 ?>

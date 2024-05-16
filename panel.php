@@ -6,7 +6,7 @@
             header("location: landing.php");
         }
         // if user is not an admin, redirect to index page
-        else if ($_SESSION['user'][2] < 3) {
+        else if ($_SESSION['user']['authorization'] < 3) {
             header("location: index.php");
         }   
 ?>

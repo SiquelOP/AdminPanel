@@ -78,11 +78,11 @@ $(document).ready(function () {
     })
 
     $('.submit').click(function (e) {
-        sendForm();
+        if ( loginOkay && passwOaky && emailOkay ) sendForm();
     });
 
     $(document).keydown(function(event) {
-        if (event.which === 13) {
+        if (event.which === 13 && loginOkay && passwOaky && emailOkay) {
             sendForm();
         }
     });
@@ -93,11 +93,12 @@ const sendEmailForm = () => {
     $.ajax({
         url: 'API/isEmailFree.php',
         type: 'post',
+        dataType: 'json',
         data: {
             email: email.val(),
         },
         success: function(response) {
-            if (response) { 
+            if (response.success) { 
                 $('.emailIndicator').css({
                     'display': 'block',
                     'clip-path': 'polygon(15% 41%, 15% 41%, 15% 41%, 15% 41%, 15% 41%, 15% 41%, 0 59%, 35% 90%, 35% 90%, 100% 21%, 90% 0, 35% 59%)',
@@ -146,11 +147,12 @@ const sendLoginForm = () => {
     $.ajax({
         url: 'API/isloginFree.php',
         type: 'post',
+        dataType: 'json',
         data: {
             login: login.val(),
         },
         success: function(response) {
-            if (response) { 
+            if (response.success) { 
                 $('.loginIndicator').css({
                     'display': 'block',
                     'clip-path': 'polygon(15% 41%, 15% 41%, 15% 41%, 15% 41%, 15% 41%, 15% 41%, 0 59%, 35% 90%, 35% 90%, 100% 21%, 90% 0, 35% 59%)',
@@ -201,15 +203,17 @@ const sendForm = () => {
     $.ajax({
         url: 'API/registerUser.php',
         type: 'post',
+        dataType: 'json',
         data: {
             login: login.val(),
             passw: passw.val(),
             email: email.val()
         },
         success: function(response) {
-            if (response) {
+            if (response.success) {
                 $('.refresher').css({
                     'display': 'block',
+                    'backdrop-filter': 'blur(50px)'
                 })
                 $('.refresher').animate({
                     'top': '0',

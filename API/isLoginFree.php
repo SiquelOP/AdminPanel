@@ -10,11 +10,11 @@
 
     
     if ( in_array($login, $logins) ) {
-        echo false;
+        echo json_encode(['success' => false]);
     }
 
     else {
-        echo true;
+        echo json_encode(['success' => true]);
     }
 
 ?>

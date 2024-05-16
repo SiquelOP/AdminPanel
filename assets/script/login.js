@@ -31,16 +31,18 @@ const sendForm = () => {
     $.ajax({
         url: 'API/loginUser.php',
         type: 'post',
+        dataType: 'json',
         data: {
             login: login.val(),
             passw: password.val()
         },
         success: function(response) {
-            response = JSON.parse(response);
-
             if (response.success) {
-                $('.refresher').animate({
+                $('.refresher').css({
                     'display': 'block',
+                    'backdrop-filter': 'blur(50px)'
+                })
+                $('.refresher').animate({
                     'top': '0',
                 }, 'fast', function() {
                     window.location.href = response.authorization == 3 ? 'panel.php' : 'index.php';
