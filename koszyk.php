@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="assets/script/main.js" defer></script>
     <script src="assets/script/mouseParalax.js" defer></script>
-    <script src="assets/script/loadCartCards.js" defer></script>
+    <script src="assets/script/loadCartCards.js" defer type="module"></script>
     <link rel="stylesheet" href="assets/style/css/cart.css">
 </head>
 <body>

@@ -1,3 +1,5 @@
+import { addItems } from "./changeCartItemsValue.js";
+import { removeItems } from "./changeCartItemsValue.js";
 $(document).ready(function () {
     getProducts();
 });
@@ -22,9 +24,9 @@ const getProducts = () => {
                         .append($('<div>') 
                             .append($('<h3>').text(element['price'] + 'zł'))
                             .append($('<div>')
-                                .append($('<span>').addClass('plus').append($('<img>').attr('src', 'https://img.icons8.com/material-outlined/24/848d97/plus--v1.png')))
+                                .append($('<span>').addClass('minus').append($('<img>').attr('src', 'https://img.icons8.com/ios-glyphs/30/848d97/minus.png')).click(addItems(element['id'])))
                                 .append($('<span>').addClass('numberq').text(element['quantity']))
-                                .append($('<span>').addClass('minus').append($('<img>').attr('src', 'https://img.icons8.com/ios-glyphs/30/848d97/minus.png')))
+                                .append($('<span>').addClass('plus').append($('<img>').attr('src', 'https://img.icons8.com/material-outlined/24/848d97/plus--v1.png')).click(removeItems(element['id'])))
                                 .addClass('quantity')
                             )
                         );
