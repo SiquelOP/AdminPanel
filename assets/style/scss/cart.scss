@@ -1,0 +1,86 @@
+@import 'main';
+@import 'mouse-paralax';
+
+body {
+    overflow: hidden;
+
+    header {
+        position: relative ;
+        top: 0;
+        margin-bottom: 96px;
+    }
+
+    .container {
+        max-width: 1275px;
+        width: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        flex-wrap: wrap;
+
+        .card {
+            width: 70%;
+            height: 75px;
+            padding: 0 15px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            position: relative;
+            color: #848d97;
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: .375rem;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+
+                h1 {
+                    margin: auto;
+                }
+
+                h3 {
+                    margin: auto;
+                }
+
+                .quantity {
+                    aspect-ratio: 4 / 3;
+                    height: 60%;
+
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: .375rem;
+
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    gap: 0;
+
+                    span {
+                        height: 45%;
+                        img {
+                            height: 100%;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            img.shopItem {
+                aspect-ratio: 16 / 9;
+                height: 100%;
+            }
+        }
+    }
+
+}

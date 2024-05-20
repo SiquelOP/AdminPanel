@@ -17,16 +17,73 @@ body {
 
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         gap: 25px;
+
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 625px) {
+            flex-direction: column;
+            gap: 96px;
+        }
+
+        // display: grid;
+        // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        // gap: 25px;
+        // max-width: 1275px;
+        // width: 100%;
+        // margin: 0 auto;
 
         .card {
             max-width: 300px;
             width: 100%;
             aspect-ratio: 10 / 16;
             border-radius: .375rem;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: contain;
+
+            z-index: 99997;
+            color: white;
+            position: relative;
+            padding: 10px;
+
+            display: none;
+
+            img.shopItem {
+                aspect-ratio: 16 / 9;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            img.svgImg {
+                padding: 10px;
+                border: 1px solid #119e00;
+                border-radius: 0.375rem;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+
+                transition-duration: .3s;
+                cursor: pointer;
+            }
+
+            img.svgImg:hover {
+                border-color: white!important;
+            }
+
+            h1 {
+                padding: 2px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            h3 {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                margin: 10px 0;
+            }
         }
     }
 }

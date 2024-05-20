@@ -45,7 +45,7 @@
                 </h1>
     
                 <p class="subtitle">
-                    Dokouj swoich zakupów w wiodącym sklepie w europie.
+                    Dokonuj swoich zakupów w wiodącym sklepie w europie.
                 </p>
     
                 <div class="optionHolder">
