@@ -93,6 +93,10 @@ body {
   width: 100% !important;
 }
 
+.container {
+  overflow-x: scroll;
+}
+
 .refresher {
   z-index: 999999;
   width: 100%;

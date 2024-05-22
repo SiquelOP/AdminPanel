@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 20, 2024 at 10:25 PM
+-- Generation Time: Maj 22, 2024 at 10:26 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -48,18 +48,11 @@ INSERT INTO `authorization` (`id`, `name`) VALUES
 --
 
 CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
+  `cartId` int(11) NOT NULL,
   `userLogin` varchar(255) NOT NULL,
   `productId` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`id`, `userLogin`, `productId`, `quantity`) VALUES
-(21, 'Pablo', 4, 2);
 
 -- --------------------------------------------------------
 
@@ -69,10 +62,10 @@ INSERT INTO `cart` (`id`, `userLogin`, `productId`, `quantity`) VALUES
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `name` varchar(25) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `img` varchar(255) DEFAULT NULL,
   `price` double NOT NULL,
-  `stock` int(25) NOT NULL,
+  `stock` int(255) NOT NULL,
   `description` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -82,9 +75,10 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `img`, `price`, `stock`, `description`) VALUES
 (3, 'Darth Tyranius', 'https://tinyurl.com/2t6etyu5', 692137420, 1, 'Darth Tyranius aka Marek Kubit. Świteny pomockik w pracach szkolnych. Pomaga w tworzeniu plau lekcji oraz zastępstw, uczy uczniów chodzi jak imperator a co najważniejsze dyrektoruje na lewo i prawo. Wymarzony dyrektor może być twój już teraz!'),
-(4, 'RJ', 'https://tinyurl.com/3dznjy7s', 0.69, 9986, 'Nie chciany, nie lubiany i co najważniejsze nie szanowany oraz wypalony zawodowo nauczyciel. Świetnie sprawdzi się w twojej szkole!\r\nTeraz w promocyjnej cenie!'),
-(5, 'Miecz świetlny', 'https://tinyurl.com/2ajf64sr', 999999999, 0, 'Tylko teraz! Miecz świetlny twojej matki.\r\nMożesz nim robić dosłownie wszystko! '),
-(6, 'Satelita', 'https://tinyurl.com/3tyy9u7j', 450, 20, 'Cygany ukradli stelite ruskom! na promocji. Kupuj póki jest!');
+(4, 'RJ', 'https://tinyurl.com/3dznjy7s', 0.69, 69, 'Nie chciany, nie lubiany i co najważniejsze nie szanowany oraz wypalony zawodowo nauczyciel. Świetnie sprawdzi się w twojej szkole!\r\nTeraz w promocyjnej cenie!'),
+(5, 'Miecz świetlny', 'https://tinyurl.com/2ajf64sr', 999999999, 5, 'Tylko teraz! Miecz świetlny twojej matki.\r\nMożesz nim robić dosłownie wszystko! '),
+(6, 'Satelita', 'https://tinyurl.com/3tyy9u7j', 450, 5, 'Cygany ukradli stelite ruskom! na promocji. Kupuj póki jest!'),
+(7, 'Pasożyt', 'https://tinyurl.com/yc5hy2p7', 420, 5, 'Sebastian Drabik to taki pasożyt. Kup sobie jednego!');
 
 -- --------------------------------------------------------
 
@@ -125,7 +119,7 @@ ALTER TABLE `authorization`
 -- Indeksy dla tabeli `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`cartId`),
   ADD KEY `userLogin` (`userLogin`),
   ADD KEY `productId` (`productId`);
 
@@ -157,13 +151,13 @@ ALTER TABLE `authorization`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

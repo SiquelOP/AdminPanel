@@ -1,5 +1,4 @@
-import { addItems } from "./changeCartItemsValue.js";
-import { removeItems } from "./changeCartItemsValue.js";
+import { changeQuantity } from "./changeQuantity.js";
 $(document).ready(function () {
     getProducts();
 });
@@ -15,6 +14,8 @@ const getProducts = () => {
                 let products = response.products;
                 setTimeout(function() {
                     products.forEach(element => {
+                        let span = $('<span>').addClass('numberq').text(element['quantity'])
+
                         let structure = $('<div>')
                         .addClass('card')
                         .append($('<div>')
@@ -24,9 +25,9 @@ const getProducts = () => {
                         .append($('<div>') 
                             .append($('<h3>').text(element['price'] + 'zł'))
                             .append($('<div>')
-                                .append($('<span>').addClass('minus').append($('<img>').attr('src', 'https://img.icons8.com/ios-glyphs/30/848d97/minus.png')).click(addItems(element['id'])))
-                                .append($('<span>').addClass('numberq').text(element['quantity']))
-                                .append($('<span>').addClass('plus').append($('<img>').attr('src', 'https://img.icons8.com/material-outlined/24/848d97/plus--v1.png')).click(removeItems(element['id'])))
+                                .append($('<span>').addClass('minus').append($('<img>').attr('src', 'https://img.icons8.com/ios-glyphs/30/848d97/minus.png').click( () => changeQuantity(structure, span, element['productId'], -1) )))
+                                .append(span)
+                                .append($('<span>').addClass('plus').append($('<img>').attr('src', 'https://img.icons8.com/material-outlined/24/848d97/plus--v1.png').click( () => changeQuantity(structure, span, element['productId'], 1))))
                                 .addClass('quantity')
                             )
                         );

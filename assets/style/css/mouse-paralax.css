@@ -5,7 +5,7 @@
   overflow: hidden;
 }
 .paralax img.paralax-elem {
-  position: absolute;
+  position: fixed;
   min-width: 100%;
   scale: 1.05;
   top: 50%;

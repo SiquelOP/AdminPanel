@@ -20,6 +20,7 @@ body {
 }
 
 .loginForm .holderP, .registerForm .holderP {
+  display: block !important;
   position: absolute;
   right: 10px;
   top: calc(100% + 10px);
@@ -27,14 +28,14 @@ body {
 .loginForm .holderP .postScriptum, .registerForm .holderP .postScriptum {
   position: relative;
   margin: 0;
-  color: #848d97;
+  color: white;
   cursor: pointer;
 }
 .loginForm .holderP .postScriptum::after, .registerForm .holderP .postScriptum::after {
   content: "";
   width: 0;
   height: 3px;
-  background: linear-gradient(transparent, rgb(134, 138, 207) 30%, rgb(134, 138, 207) 70%, transparent);
+  background: linear-gradient(transparent, black 30%, black 70%, transparent);
   bottom: -5px;
   left: 50%;
   translate: -50% 0;
@@ -92,6 +93,10 @@ body {
   width: 100% !important;
 }
 
+.container {
+  overflow-x: scroll;
+}
+
 .refresher {
   z-index: 999999;
   width: 100%;
@@ -125,18 +130,31 @@ header {
   height: 250px;
   width: 100%;
   border-bottom: 1px solid rgb(134, 138, 207);
-  padding: 0 15% 0 15%;
   box-shadow: 0px 0px 30px 1px rgb(72, 83, 171);
 }
-header img {
+header .headerHolder {
+  max-width: 1275px;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headerHolder a {
+  height: 100%;
+}
+header .headerHolder a img {
   height: 90%;
 }
-header .user img {
+header .headerHolder .user img {
   padding: 15px;
   border-radius: 69%;
   transition-duration: 0.3s;
 }
-header .user img:hover {
+header .headerHolder .user img:hover {
   cursor: pointer;
   background-color: hsl(270, 100%, 7%);
   transition-duration: 0.1s;
@@ -144,14 +162,11 @@ header .user img:hover {
 
 .paralax {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-.paralax img {
+.paralax img.paralax-elem {
   position: absolute;
   min-width: 100%;
   scale: 1.05;

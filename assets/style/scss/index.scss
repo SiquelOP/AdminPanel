@@ -2,7 +2,10 @@
 @import 'mouse-paralax';
 
 body {
-    overflow: hidden;
+    overflow: visible !important;
+    .paralax {
+        overflow-y: scroll!important;
+    }
 
     header {
         position: relative ;
@@ -50,6 +53,10 @@ body {
 
             display: none;
 
+            &:hover .edit {
+                opacity: 1;
+            }
+
             img.shopItem {
                 aspect-ratio: 16 / 9;
                 width: 100%;
@@ -83,6 +90,25 @@ body {
                 bottom: 10px;
                 left: 10px;
                 margin: 10px 0;
+            }
+
+            .edit {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                opacity: 0;
+                transition-duration: .1s;
+                z-index: 99999999;
+                aspect-ratio: 1 / 1;
+                height: 40px;
+                border: 2px solid transparent;
+                padding: 5px;
+                border-radius: .375rem;
+
+
+                &:hover {
+                    border: 2px solid #119e00;
+                }
             }
         }
     }
