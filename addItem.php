@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if ($_SESSION['user']['authorization'] < 3) {
+        header("location: index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +29,7 @@
                 <input type="text" class="" name="name" maxlength="255" placeholder="Nazwa" id="nameArea">
                 <input type="text" class="" name="img" maxlength="255" placeholder="Obraz" id="imgArea">
                 <input type="number" class="" name="price" placeholder="Cena" id="priceArea">
-                <input type="text" class="" name="stock" maxlength="255" placeholder="Magazyn" id="stockArea">
+                <input type="number" class="" name="stock" placeholder="Magazyn" id="stockArea">
                 <input type="text" class="" name="desc" maxlength="255" placeholder="Opis" id="descArea">
 
                 <button class="submit">Dodaj</button>

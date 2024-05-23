@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 22, 2024 at 10:26 PM
+-- Generation Time: Maj 23, 2024 at 09:37 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -75,7 +75,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `img`, `price`, `stock`, `description`) VALUES
 (3, 'Darth Tyranius', 'https://tinyurl.com/2t6etyu5', 692137420, 1, 'Darth Tyranius aka Marek Kubit. Świteny pomockik w pracach szkolnych. Pomaga w tworzeniu plau lekcji oraz zastępstw, uczy uczniów chodzi jak imperator a co najważniejsze dyrektoruje na lewo i prawo. Wymarzony dyrektor może być twój już teraz!'),
-(4, 'RJ', 'https://tinyurl.com/3dznjy7s', 0.69, 69, 'Nie chciany, nie lubiany i co najważniejsze nie szanowany oraz wypalony zawodowo nauczyciel. Świetnie sprawdzi się w twojej szkole!\r\nTeraz w promocyjnej cenie!'),
+(4, 'RJ', 'https://tinyurl.com/3dznjy7s', 5.69, 69, 'Super morda elo!'),
 (5, 'Miecz świetlny', 'https://tinyurl.com/2ajf64sr', 999999999, 5, 'Tylko teraz! Miecz świetlny twojej matki.\r\nMożesz nim robić dosłownie wszystko! '),
 (6, 'Satelita', 'https://tinyurl.com/3tyy9u7j', 450, 5, 'Cygany ukradli stelite ruskom! na promocji. Kupuj póki jest!'),
 (7, 'Pasożyt', 'https://tinyurl.com/yc5hy2p7', 420, 5, 'Sebastian Drabik to taki pasożyt. Kup sobie jednego!');
@@ -151,13 +151,13 @@ ALTER TABLE `authorization`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

@@ -1,0 +1,49 @@
+@import 'main';
+@import 'mouse-paralax';
+
+.editField {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 16 / 12;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    border: 3px solid $logibFieldBorder;
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    label {
+        color: white;
+        margin: auto;
+    }
+
+    input {
+        padding: 15px 0 5px 15px;
+        background: transparent;
+        
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $logibFieldBorder;
+
+        font-size: 1.025em;
+        font-weight: bolder;
+        letter-spacing: 0.07em;
+        color: $textColor;
+
+        transition-duration: .3s;
+    }
+}

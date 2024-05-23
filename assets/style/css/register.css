@@ -93,10 +93,6 @@ body {
   width: 100% !important;
 }
 
-.container {
-  overflow-x: scroll;
-}
-
 .refresher {
   z-index: 999999;
   width: 100%;
@@ -167,7 +163,7 @@ header .headerHolder .user img:hover {
   overflow: hidden;
 }
 .paralax img.paralax-elem {
-  position: absolute;
+  position: fixed;
   min-width: 100%;
   scale: 1.05;
   top: 50%;
@@ -198,6 +194,10 @@ body {
   border-radius: 16px;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 .registerForm input {
   padding: 15px 10px 5px 10px;

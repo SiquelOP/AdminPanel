@@ -14,7 +14,10 @@ const getProducts = () => {
                 let products = response.products;
                 setTimeout(function() {
                     products.forEach(element => {
-                        let edit = $('<img>').attr('src', 'https://img.icons8.com/ios/50/119e00/edit--v1.png').addClass('edit').click(() => editElem(element['id']));
+                        let edit = $('<img>').attr('src', 'https://img.icons8.com/ios/50/119e00/edit--v1.png').addClass('edit').click( function() {
+                            localStorage.setItem('id', element['id']);
+                            window.location.href = 'editItem.php';
+                        });
 
                         let structure = $('<div>')
                         .addClass('card')
@@ -23,7 +26,7 @@ const getProducts = () => {
                         .append($('<p>').text(element['description']))
                         .append($('<h3>').text(element['price'] + 'zł'))
                         .append($('<img>').attr('src', 'https://img.icons8.com/ios-glyphs/30/119e00/add-basket.png').addClass('svgImg').click(function() {addToCart(element['id'])}));
-                        if ( window.location.pathname == '/strony/AdminPanel/panel.php') structure.append(edit);
+                        if ( window.location.pathname.split('/').pop() == 'panel.php') structure.append(edit);
                         $('.container').append(structure);
                         structure.delay(50 * i).fadeIn('slow');
                         i++;

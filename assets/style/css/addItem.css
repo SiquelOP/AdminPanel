@@ -93,10 +93,6 @@ body {
   width: 100% !important;
 }
 
-.container {
-  overflow-x: scroll;
-}
-
 .refresher {
   z-index: 999999;
   width: 100%;
@@ -149,6 +145,10 @@ header .headerHolder a {
 header .headerHolder a img {
   height: 90%;
 }
+header .headerHolder .user a img {
+  height: 80px;
+  aspect-ratio: 1/1;
+}
 header .headerHolder .user img {
   padding: 15px;
   border-radius: 69%;
@@ -167,7 +167,7 @@ header .headerHolder .user img:hover {
   overflow: hidden;
 }
 .paralax img.paralax-elem {
-  position: absolute;
+  position: fixed;
   min-width: 100%;
   scale: 1.05;
   top: 50%;
@@ -177,4 +177,8 @@ header .headerHolder .user img:hover {
 }
 .paralax .registerForm, .paralax .loginForm {
   box-shadow: 0px 0px 30px 1px rgb(72, 83, 171), inset 0px 0px 30px 0px rgb(72, 83, 171);
+}
+
+.loginForm {
+  aspect-ratio: 16/12 !important;
 }

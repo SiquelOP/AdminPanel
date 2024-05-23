@@ -21,6 +21,11 @@ body {
     border-radius: 16px;
     backdrop-filter: blur(20px);
 
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
     input {
         padding: 15px 10px 5px 10px;
         background: transparent;
