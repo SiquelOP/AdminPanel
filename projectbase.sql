@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 23, 2024 at 09:37 PM
+-- Generation Time: Mar 09, 2025 at 12:06 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -74,11 +74,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `img`, `price`, `stock`, `description`) VALUES
-(3, 'Darth Tyranius', 'https://tinyurl.com/2t6etyu5', 692137420, 1, 'Darth Tyranius aka Marek Kubit. Świteny pomockik w pracach szkolnych. Pomaga w tworzeniu plau lekcji oraz zastępstw, uczy uczniów chodzi jak imperator a co najważniejsze dyrektoruje na lewo i prawo. Wymarzony dyrektor może być twój już teraz!'),
-(4, 'RJ', 'https://tinyurl.com/3dznjy7s', 5.69, 69, 'Super morda elo!'),
 (5, 'Miecz świetlny', 'https://tinyurl.com/2ajf64sr', 999999999, 5, 'Tylko teraz! Miecz świetlny twojej matki.\r\nMożesz nim robić dosłownie wszystko! '),
-(6, 'Satelita', 'https://tinyurl.com/3tyy9u7j', 450, 5, 'Cygany ukradli stelite ruskom! na promocji. Kupuj póki jest!'),
-(7, 'Pasożyt', 'https://tinyurl.com/yc5hy2p7', 420, 5, 'Sebastian Drabik to taki pasożyt. Kup sobie jednego!');
+(6, 'Satelita', 'https://tinyurl.com/3tyy9u7j', 450, 5, 'Cygany ukradli stelite ruskom! na promocji. Kupuj póki jest!');
 
 -- --------------------------------------------------------
 
@@ -98,11 +95,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`login`, `email`, `password`, `authorization`) VALUES
-('KamilS', 'KamilSwiatek@wp.pl', '$2y$10$oQd1qN4d5.demjcFRwOpMeCB6cXZ.wY6iF5oeCqZuTX2ZJcITgqFm', 2),
-('Pablo', 'halfpawel@gmail.com', '$2y$10$opiAUA6tY0qdhkv1d3S63OaaJoi5Ctb0Jp12NKkp1JW2bsL2AtSNG', 3),
-('Szczepixson', 'jakubSzczepanik@gamil.com', '$2y$10$k2tS7ZFvKWEmYSHWKnzFQ..AGNwXmavmTsU4L1PAoC5.fag1NdJJq', 2),
-('test1', 'wp@wp.pl', '$2y$10$qqB3sQEy5zBQPPuv/BNG5ew/OjxF1pnn.OcHnOEA3nzhD64u5ytgW', 2),
-('Tymek', 'tymek@wp.pl', '$2y$10$y6TexDnNTZFCArK9CZhLU.Uj1TM7nzWaVeh/g27YIqnQMrRorOPY6', 2),
+('admin', 'admin@admin.com', 'admin', 3),
 ('user', 'user@user.pl', '$2y$10$aJKVZKTa9uPQtnq9xjVtl.qQ8BQklZaIG6WrEDFVZ.Taw5SPri9Uq', 2);
 
 --
